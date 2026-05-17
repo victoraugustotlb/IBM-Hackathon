@@ -1,0 +1,130 @@
+.pomodoro-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.timer-header {
+  text-align: center;
+  width: 100%;
+}
+
+.timer-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.sessions-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-textSecondary);
+  font-size: 0.875rem;
+}
+
+.session-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.session-count {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.timer-display {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-circle-bg {
+  fill: none;
+  stroke: var(--color-surfaceLight);
+  stroke-width: 8;
+}
+
+.timer-circle-progress {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-time {
+  font-size: 4rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer-info {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background: var(--color-surfaceLight);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: var(--color-textSecondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .timer-display {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .timer-time {
+    font-size: 3rem;
+  }
+  
+  .timer-info {
+    gap: 1rem;
+  }
+}
+
+/* Made with Bob */
